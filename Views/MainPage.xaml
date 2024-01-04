@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppProfesores.Views.MainPage"
+             BackgroundColor="WhiteSmoke">
+
+    <VerticalStackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+
+        <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="300"
+                >
+
+            <Image
+                    Source="tcnm.png"
+                    SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                    HeightRequest="200"
+                    FlowDirection="LeftToRight"
+                    HorizontalOptions="Start"
+                    />
+            <VerticalStackLayout
+                    VerticalOptions="CenterAndExpand"
+                    >
+
+                <Label
+                        Text="Tecnologico Nacional de Mexico"
+                        SemanticProperties.Description="Level3"
+                        FontSize="32"
+                        HorizontalOptions="Center"
+                        TextColor="#173668"/>
+                <Label
+                        Text="Instituto Tecnologico de Zacatepec"
+                        SemanticProperties.Description="Level3"
+                        FontSize="25"
+                        HorizontalOptions="Center"
+                        TextColor="#173668"/>
+                <Label
+                        Text="Ingenieria en Sistemas Computacionales"
+                        SemanticProperties.Description="Level3"
+                        FontSize="30"
+                        HorizontalOptions="Center"
+                        TextColor="#173668"/>
+            </VerticalStackLayout>
+
+            <Image
+                    Source="itz.png"
+                    SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                    HeightRequest="200"
+                    FlowDirection="LeftToRight"
+                    HorizontalOptions="End"/>
+
+        </HorizontalStackLayout>
+
+        <VerticalStackLayout
+            VerticalOptions="Center"
+            Padding="0,200,0,300">
+            <Label
+                    Text="Programación Lógica y Funcional"
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="38"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="Center"
+                    TextColor="#173668"/>
+
+            <Label
+                    Text="Generación de horarios con ayuda de PLR"
+                    SemanticProperties.HeadingLevel="Level1"
+                    SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                    FontSize="52"
+                    HorizontalTextAlignment="Center"
+                VerticalOptions="Center"
+                    TextColor="#173668"
+                    FontAttributes="Bold"/>
+
+
+        </VerticalStackLayout>
+
+        <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="300">
+
+
+            <Button
+                x:Name="SalirBtn"
+                Text="SALIR"
+                SemanticProperties.Hint="Cerrar la aplicación completamente"
+                Clicked="SalirBtn_Clicked"
+                WidthRequest="200"
+                TextColor="WhiteSmoke"
+                BackgroundColor="#173668"
+                FontAttributes="Bold"
+                FontSize="25"
+                />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="MENU"
+                SemanticProperties.Hint="Ir al menú principal"
+                Clicked="OnCounterClicked"
+                WidthRequest="400"
+                TextColor="WhiteSmoke"
+                BackgroundColor="#173668"
+                FontAttributes="Bold"
+                FontSize="25"
+                />
+
+            <Button
+                x:Name="AboutBtn"
+                Text="ACERCA DE"
+                SemanticProperties.Hint="Ir a la ventana de Acerca de"
+                Clicked="AboutBtn_Clicked"
+                WidthRequest="200"
+                TextColor="WhiteSmoke"
+                BackgroundColor="#173668"
+                FontAttributes="Bold"
+                FontSize="25"
+                />
+
+        </HorizontalStackLayout>
+
+
+    </VerticalStackLayout>
+
+</ContentPage>

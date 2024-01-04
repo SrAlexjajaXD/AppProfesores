@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppProfesores.Views.HorariosView"
+             BackgroundColor="WhiteSmoke">
+    <VerticalStackLayout>
+        <Label 
+            Text="Listado de materias"
+            HorizontalOptions="Center"
+            FontSize="60"
+            TextColor="#173668" 
+            FontAttributes="Bold"
+            Padding="0,50,0,0"/>
+
+
+        <Frame
+            VerticalOptions="Start" 
+            Margin="97,20,85,0"
+            Padding="20,5,20,10"
+            HeightRequest="760"
+            CornerRadius="20"
+            BackgroundColor="#173668">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="NOMBRE" TextColor="White" FontSize="35" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="CREDS" TextColor="White" FontSize="35" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center"/>
+                <Label Text="GRUPO" TextColor="White" FontSize="35" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="Center"/>
+                <Label Text="L" TextColor="White" FontSize="35" Grid.Row="0" Grid.Column="3" HorizontalTextAlignment="Center"/>
+                <Label Text="M" TextColor="White" FontSize="35" Grid.Row="0" Grid.Column="4" HorizontalTextAlignment="Center"/>
+                <Label Text="M" TextColor="White" FontSize="35" Grid.Row="0" Grid.Column="5" HorizontalTextAlignment="Center"/>
+                <Label Text="J" TextColor="White" FontSize="35" Grid.Row="0" Grid.Column="6" HorizontalTextAlignment="Center"/>
+                <Label Text="V" TextColor="White" FontSize="35" Grid.Row="0" Grid.Column="7" HorizontalTextAlignment="Center"/>
+            </Grid>
+        </Frame>
+
+        <ListView
+            x:Name="MyListView" 
+            VerticalOptions="Start" 
+            Margin="80,2,80,20"
+            VerticalScrollBarVisibility="Default"
+            HeightRequest="760"
+            HasUnevenRows="True"
+            >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame CornerRadius="20" BackgroundColor="GhostWhite" Margin="3" BorderColor="GhostWhite">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="100"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding nombreMaterias}" Grid.Row="0" Grid.Column="0" 
+                                   TextColor="Black" 
+                                   FontSize="Title"
+                                   />
+                                <Label Text="{Binding cred}" Grid.Row="0" Grid.Column="1" 
+                                   TextColor="Black" 
+                                   FontSize="Title" 
+                                   HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding gpo}" Grid.Row="0" Grid.Column="2" 
+                                   TextColor="Black" 
+                                   FontSize="Title" 
+                                   HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding l}" Grid.Row="0" Grid.Column="3" 
+                                   TextColor="Black" 
+                                   FontSize="Title" 
+                                   HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding m}" Grid.Row="0" Grid.Column="4" 
+                                   TextColor="Black" 
+                                   FontSize="Title" 
+                                   HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding m1}" Grid.Row="0" Grid.Column="5" 
+                                   TextColor="Black" 
+                                   FontSize="Title" 
+                                   HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding j}" Grid.Row="0" Grid.Column="6" 
+                                   TextColor="Black" 
+                                   FontSize="Title" 
+                                   HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding v}" Grid.Row="0" Grid.Column="7" 
+                                   TextColor="Black" 
+                                   FontSize="Title" 
+                                   HorizontalTextAlignment="Center"/>
+                            </Grid>
+                        </Frame>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <Button
+            x:Name="Regresar"
+            Text="REGRESAR"
+            TextColor="WhiteSmoke"
+            BackgroundColor="#173668"
+            FontSize="30"
+            Margin="80,0,80,0"
+            Clicked="Regresar_Clicked"
+            CornerRadius="30"/>
+    </VerticalStackLayout>
+</ContentPage>

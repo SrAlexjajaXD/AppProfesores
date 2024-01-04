@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppProfesores.Views.Menu"
+             BackgroundColor="WhiteSmoke"
+             >
+    <VerticalStackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        >
+        
+        <Label 
+            Text="ACERCA DE"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="60"
+            TextColor="#173668"/>
+        <HorizontalStackLayout
+            Padding="100"
+            Spacing="40">
+            <Image Source="MiFoto.jpg"
+                   HeightRequest="645"/>
+            <VerticalStackLayout>
+                
+                <Label 
+                    Text="¿QUE ES EL PROYECTO?"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    FontSize="40"
+                    TextColor="#173668"/>
+                <Label 
+                    Text="Proyecto de programación lógica y funcional en el &#10;cual se generarán horarios mediante el uso de PLR"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    FontSize="30"
+                    Padding="0,0,0,40"
+                    TextColor="Black"/>
+                <Label 
+                    Text="AUTOR:"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    FontSize="40"
+                    TextColor="#173668"/>
+                <Label 
+                    Text="Alex Lozano Garcia"
+                    VerticalOptions="Center" 
+                    FontSize="30"
+                    Padding="0,0,0,40"
+                    TextColor="Black"/>
+                <Label 
+                    Text="LUGAR:"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    FontSize="40"
+                    TextColor="#173668"/>
+                <Label 
+                    Text="Zacatepec, Mor."
+                    VerticalOptions="Center" 
+                    FontSize="30"
+                    Padding="0,0,0,40"
+                    TextColor="Black"/>
+                <Label 
+                    Text="FECHA:"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    FontSize="40"
+                    TextColor="#173668"/>
+                <Label 
+                    Text="02/03/2023"
+                    VerticalOptions="Center" 
+                    FontSize="30"
+                    Padding="0,0,0,40"
+                    TextColor="Black"/>
+                <Button
+                    Text="REGRESAR"
+                    TextColor="WhiteSmoke"
+                    BackgroundColor="#173668"
+                    Clicked="Button_Clicked"
+                    FontSize="25"/>
+
+
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppProfesores.Views.Maestrosview"
+             BackgroundColor="White">
+    <VerticalStackLayout>
+        <Label 
+            Text="Listado de maestros"
+            HorizontalOptions="Center"
+            FontSize="60"
+            TextColor="#173668" 
+            FontAttributes="Bold"
+            Padding="0,20,0,0"/>
+
+        <Frame
+            VerticalOptions="Start" 
+            Margin="97,20,85,0"
+            Padding="20,5,20,10"
+            HeightRequest="760"
+            CornerRadius="20"
+            BackgroundColor="#173668">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="NOMBRE" TextColor="White" FontSize="35" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="HORAS APROBADAS" TextColor="White" FontSize="35" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center"/>
+                <Label Text="HORAS PAGADAS" TextColor="White" FontSize="35" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="Center"/>
+            </Grid>
+        </Frame>
+
+        <ListView
+            x:Name="MyListView" 
+            VerticalOptions="Start" 
+            Margin="80,2,80,20"
+            VerticalScrollBarVisibility="Default"
+            HeightRequest="760"
+            HasUnevenRows="True"
+            >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame CornerRadius="20" BackgroundColor="GhostWhite" Margin="3" BorderColor="GhostWhite">
+                            <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding nombre}" Grid.Row="0" Grid.Column="0" 
+                                   TextColor="Black" 
+                                   FontSize="Title"
+                                   />
+                            <Label Text="{Binding horasP}" Grid.Row="0" Grid.Column="1" 
+                                   TextColor="Black" 
+                                   FontSize="Title" 
+                                   HorizontalTextAlignment="Center"/>
+                            <Label Text="{Binding horasA}" Grid.Row="0" Grid.Column="2" 
+                                   TextColor="Black" 
+                                   FontSize="Title" 
+                                   HorizontalTextAlignment="Center"/>
+                        </Grid>
+                        </Frame>
+                        
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <Button
+            x:Name="Regresar"
+            Text="REGRESAR"
+            TextColor="WhiteSmoke"
+            BackgroundColor="#173668"
+            FontSize="30"
+            Margin="80,0,80,0"
+            Clicked="Regresar_Clicked"
+            CornerRadius="30"/>
+    </VerticalStackLayout>
+</ContentPage>
